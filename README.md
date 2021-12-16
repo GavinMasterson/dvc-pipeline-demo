@@ -1,2 +1,2 @@
-# dvc-pipeline-demo
-This repo contains a working example of a DVC pipeline
+# DVC Pipeline Demo 
+This repo contains a working example of a DVC pipeline. 
