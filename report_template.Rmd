@@ -1,0 +1,25 @@
+---
+title: "Palmer Penguins Report"
+author: "Gavin Masterson"
+date: "12/16/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+load("data/outputs.RData")
+```
+
+## Our Model Output
+
+```{r model}
+summary(model_output)
+```
+
+## Our GGPlot Object
+
+```{r ggplot, echo=FALSE}
+plot_object
+```
+
+
