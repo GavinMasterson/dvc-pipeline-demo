@@ -1,7 +1,7 @@
 ---
 title: "Palmer Penguins Report"
 author: "Gavin Masterson"
-date: "12/16/2021"
+date: "`r Sys.Date()`"
 output: html_document
 ---
 
@@ -12,7 +12,7 @@ load("data/outputs.RData")
 
 ## Our Model Output
 
-```{r model}
+```{r model, comment=NA}
 summary(model_output)
 ```
 
