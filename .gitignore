@@ -4,6 +4,5 @@
 .Ruserdata
 /report.html
 report_template.md
-dvc.lock
 data/*
 figure/*

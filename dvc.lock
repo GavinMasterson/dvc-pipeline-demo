@@ -1,0 +1,41 @@
+schema: '2.0'
+stages:
+  prepare:
+    cmd: Rscript data_prep.R
+    deps:
+    - path: data_prep.R
+      md5: 7027a78a6d071ea866aa9bbc2715c128
+      size: 2084
+    outs:
+    - path: data/penguins.csv
+      md5: a06a0210251465a86fb970018292304d
+      size: 15241
+  analyse:
+    cmd: Rscript analysis.R
+    deps:
+    - path: analysis.R
+      md5: ad70264ca1b3ff209c8a9287270d7513
+      size: 483
+    - path: data/penguins.csv
+      md5: a06a0210251465a86fb970018292304d
+      size: 15241
+    outs:
+    - path: data/outputs.RData
+      md5: 66de3d4109bcc2f9bc80e9fc115f07a3
+      size: 60248
+  report:
+    cmd: Rscript report.R
+    deps:
+    - path: data/outputs.RData
+      md5: 66de3d4109bcc2f9bc80e9fc115f07a3
+      size: 60248
+    - path: report.R
+      md5: 2749a0d11a888133fd8418267cbbcb11
+      size: 92
+    - path: report_template.Rmd
+      md5: b7ae1007504014d0ff24e7c453373c93
+      size: 330
+    outs:
+    - path: report.html
+      md5: 2c41dbd5c56719b0d801ff56d158cb35
+      size: 52072
