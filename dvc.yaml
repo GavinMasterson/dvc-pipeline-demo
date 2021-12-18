@@ -1,0 +1,22 @@
+stages:
+  prepare:
+    cmd: Rscript data_prep.R
+    deps:
+    - data_prep.R
+    outs:
+    - data/penguins.csv
+  analyse:
+    cmd: Rscript analysis.R
+    deps:
+    - analysis.R
+    - data/penguins.csv
+    outs:
+    - data/outputs.RData
+  report:
+    cmd: Rscript report.R
+    deps:
+    - data/outputs.RData
+    - report.R
+    - report_template.Rmd
+    outs:
+    - report.html
