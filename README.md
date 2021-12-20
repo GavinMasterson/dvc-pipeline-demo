@@ -5,10 +5,10 @@ This repo contains a functional example of a DVC pipeline for **R-users**.
 
 ## Pre-requisites
 
-Git
-DVC
-Base R
-R-Packages:
+Git  
+DVC  
+Base R  
+R-Packages:  
   - tidyverse
   - lubridate
   - janitor
