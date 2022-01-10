@@ -26,7 +26,11 @@ To experience the wonder of incorporating reproducible pipelines into your proje
 
 ```
 # Clone this repo
+# Using SSH
 git clone git@github.com:GavinMasterson/dvc-pipeline-demo.git
+
+# Or using HTTPS
+git clone https://github.com/GavinMasterson/dvc-pipeline-demo.git
 
 # Switch to the new directory
 cd dvc-pipeline-demo
